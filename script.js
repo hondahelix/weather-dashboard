@@ -1,19 +1,22 @@
 //212b74fda81302afaf00fb3bd31e29f1
 //api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
-var cityAarry = [];
+
 $(document).ready(function(){
     $("button").on("click", function(){
         event.preventDefault();
+        console.log(this);
+        var cityAarry = [];
         var city = $("#city").val();
         searchWeather(city);
-        makeCityButton(city);
+        cityArray = makeCityButton(city,cityAarry);
         $("#city").val("");
         $("#forcast").empty();
     });
+
 //save in local storage later
 //new div 
-    function makeCityButton(city){
-        if(cityAarry.includes(city)){
+    function makeCityButton(city,cityAarry){
+        if(cityAarry.includes(city)||city===""){
             return;
         }
         else{
@@ -22,9 +25,10 @@ $(document).ready(function(){
             var newButton = document.createElement("button");
             $(newButton).val(city);
             $(newButton).text(city);
+            $(newButton).addClass("card");
             $(buttonDiv).append(newButton);
             $("#city-buttons").append(buttonDiv);
-            
+            return cityAarry;
         }
     }
     function searchWeather(city){
