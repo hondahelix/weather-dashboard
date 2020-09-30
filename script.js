@@ -7,8 +7,8 @@ $(document).ready(function(){
         var city = $("#city").val();
         searchWeather(city);
         makeCityButton(city);
-        console.log(city);
         $("#city").val("");
+        $("#forcast").empty();
     });
 //save in local storage later
 //new div 
