@@ -10,7 +10,6 @@ p{
 }
 #today{
     position: absolute;
-    border: darkgrey;
     padding: 10px;
     width: 50%;
     left: 30%;
@@ -19,13 +18,12 @@ p{
     color: black;
     text-align: left;
 }
-
 .day{
     font-size: x-large;
 }
 #forcast{
     position: absolute;
-    height: 300px;
+    height: 350px;
     width: 70%;
     left: 30%;
     top: 400px;
@@ -36,8 +34,14 @@ p{
     background-color: rgb(0, 132, 255);
     float: left;
 }
+#UV-index{
+    text-align: left;
+}
 .uvcard{
+    position: absolute;
     width: 60px;
+    left:100px;
+    top: 195px;
 }
 img{
     align-self: center;

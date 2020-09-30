@@ -23,6 +23,8 @@ $(document).ready(function(){
             console.log(response);
             var iconurl = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
             //run today stuff first
+            $("#today").css("border-style", "solid");
+            $("#today").css("border-color", "gray");
             var weatherImage = document.createElement("img");
             $(weatherImage).attr("src", iconurl); 
             $("#city-day").text(response.name);
@@ -100,11 +102,11 @@ $(document).ready(function(){
             var uvIndex = response.value;
             var stringUvIndex = uvIndex.toString();
             console.log(stringUvIndex);
-            $("#UV-idex").text("UV Index: ");
+            $("#UV-index").text("UV Index: ");
             var uvCard = document.createElement("div");
             $(uvCard).addClass("card uvcard");
             $(uvCard).text(stringUvIndex);
-            $("#UV-idex").append(uvCard);
+            $("#UV-index").append(uvCard);
             uvColor(uvIndex);
         });
     }
