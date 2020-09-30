@@ -12,7 +12,6 @@ p{
     position: absolute;
     padding: 10px;
     width: 50%;
-    left: 30%;
 }
 #today p {
     color: black;
@@ -25,7 +24,7 @@ p{
     position: absolute;
     height: 350px;
     width: 70%;
-    left: 30%;
+    left: 20%;
     top: 400px;
 }
 .card {
@@ -47,4 +46,8 @@ img{
     align-self: center;
     width: 70px;
     height: 70px;
+}
+#city-buttons{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 20px;
 }

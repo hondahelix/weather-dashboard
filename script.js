@@ -1,18 +1,40 @@
 //212b74fda81302afaf00fb3bd31e29f1
 //api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
-
+var cityAarry = [];
 $(document).ready(function(){
-    $("#search-city").on("click", function(){
+    $("button").on("click", function(){
         event.preventDefault();
         var city = $("#city").val();
+        if (cityAarry.includes(city)){
+            searchWeather(city);
+        }
+        else{
+            searchWeather(city);
+            makeCityButton(city);
+        }
         console.log(city);
         $("#city").val("");
-        searchWeather(city);
+
+
 
     });
 //save in local storage later
 //new div 
-
+    function makeCityButton(city){
+        if(cityAarry.includes(city)){
+            return;
+        }
+        else{
+            cityAarry.push(city);
+            var buttonDiv = document.createElement("div");
+            var newButton = document.createElement("button");
+            $(newButton).val(city);
+            $(newButton).text(city);
+            $(buttonDiv).append(newButton);
+            $("#city-buttons").append(buttonDiv);
+            
+        }
+    }
     function searchWeather(city){
         $.ajax({
         method: "GET",

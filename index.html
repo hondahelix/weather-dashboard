@@ -17,22 +17,28 @@
     <h1>Weather Dashboard</h1>
     <!--make new div for side -->
     <div id="container">
-        <aside id="search-box">
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" id="city" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" id="search-city" type="submit">Search</button>
-            </form>
-        </aside>
-        <div>
-            <div id="today">
-                <h2 id ="city-day"></h2>
-                <p id= temperature></p>
-                <p id= humidity></p>
-                <p id= windspeed></p>
-                <p id= UV-index></p>
+        <div class = "row">
+            <div class = "col-3">
+                <aside id="search-box">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" id="city" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" id="search-city" type="submit">Search</button>
+                    </form>
+                    <div id = "city-buttons"></div>
+                </aside>
             </div>
-            <div id="forcast">
-            </div>
+            <div class = "col-9">
+                <div id="today">
+                    <h2 id ="city-day"></h2>
+                    <p id= temperature></p>
+                    <p id= humidity></p>
+                    <p id= windspeed></p>
+                    <p id= UV-index></p>
+                </div>
+        </div>
+        <div class="row">
+            <div class = "col-12" id="forcast"></div>
+        </div>
         </div>
     </div>
 
