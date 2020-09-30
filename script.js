@@ -5,18 +5,10 @@ $(document).ready(function(){
     $("button").on("click", function(){
         event.preventDefault();
         var city = $("#city").val();
-        if (cityAarry.includes(city)){
-            searchWeather(city);
-        }
-        else{
-            searchWeather(city);
-            makeCityButton(city);
-        }
+        searchWeather(city);
+        makeCityButton(city);
         console.log(city);
         $("#city").val("");
-
-
-
     });
 //save in local storage later
 //new div 
@@ -45,6 +37,7 @@ $(document).ready(function(){
             console.log(response);
             var iconurl = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
             //run today stuff first
+
             $("#today").css("border-style", "solid");
             $("#today").css("border-color", "gray");
             var weatherImage = document.createElement("img");
